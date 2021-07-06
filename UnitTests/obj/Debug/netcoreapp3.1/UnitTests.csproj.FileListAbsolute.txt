@@ -97,3 +97,11 @@ D:\Study\Coding\BowlingScoreCalculator\UnitTests\obj\Debug\netcoreapp3.1\UnitTes
 D:\Study\Coding\BowlingScoreCalculator\UnitTests\obj\Debug\netcoreapp3.1\UnitTests.dll
 D:\Study\Coding\BowlingScoreCalculator\UnitTests\obj\Debug\netcoreapp3.1\UnitTests.pdb
 D:\Study\Coding\BowlingScoreCalculator\UnitTests\obj\Debug\netcoreapp3.1\UnitTests.genruntimeconfig.cache
+D:\Study\Coding\BowlingScoreCalculator\UnitTests\bin\Debug\netcoreapp3.1\ScoreCalculator.deps.json
+D:\Study\Coding\BowlingScoreCalculator\UnitTests\bin\Debug\netcoreapp3.1\ScoreCalculator.runtimeconfig.json
+D:\Study\Coding\BowlingScoreCalculator\UnitTests\bin\Debug\netcoreapp3.1\ScoreCalculator.runtimeconfig.dev.json
+D:\Study\Coding\BowlingScoreCalculator\UnitTests\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Study\Coding\BowlingScoreCalculator\UnitTests\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Study\Coding\BowlingScoreCalculator\UnitTests\bin\Debug\netcoreapp3.1\ScoreCalculator.exe
+D:\Study\Coding\BowlingScoreCalculator\UnitTests\bin\Debug\netcoreapp3.1\ScoreCalculator.dll
+D:\Study\Coding\BowlingScoreCalculator\UnitTests\bin\Debug\netcoreapp3.1\ScoreCalculator.pdb
