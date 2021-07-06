@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ScoreCalculator.Utility
 {
-    public class BowlingGame
+    public class BowlingGame : IBowlingGame
     {
         private IList<string> progressiveScores;
         private int frameIndex = 0;
@@ -62,5 +62,12 @@ namespace ScoreCalculator.Utility
 
             return progressiveScores;
         }
+    }
+
+    public interface IBowlingGame
+    {
+        IList<string> Scores(IList<int> pins);
+
+        bool GameCompleted { get; }
     }
 }

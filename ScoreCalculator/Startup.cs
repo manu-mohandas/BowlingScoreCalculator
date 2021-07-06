@@ -7,6 +7,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using ScoreCalculator.Infrastructure.Filters;
+using ScoreCalculator.Services;
+using ScoreCalculator.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,13 +28,17 @@ namespace ScoreCalculator
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            //services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson();
             services.AddMvc(options =>
             {
                 options.Filters.Add(new ApiExceptionFilterAtrribute());
                 options.Filters.Add(new BasicAuthenticationFilter());
 
             }).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+
+            services.AddTransient(typeof(IBowlingScoreServices), typeof(BowlingScoreServices));
+            services.AddTransient(typeof(IBowlingGame), typeof(BowlingGame));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

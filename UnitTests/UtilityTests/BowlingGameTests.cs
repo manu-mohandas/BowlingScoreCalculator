@@ -9,7 +9,8 @@ namespace UnitTests.UtilityTests
     [TestFixture]
     public class BowlingGameTests
     {
-        private BowlingGame _game;
+        private IBowlingGame _game;
+
         [SetUp]
         public void SetUp()
         {

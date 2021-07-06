@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "3iqKAkFn4hAzWfyDsFmDcFV+EG8BOWBIRVBrGFC30cilBxTHcI4SXNStKK5/UXbAE+yRfHsuyUiOFe99kG/7Fw==",
+  "dgSpecHash": "QZYjwfdaEJEmauLSvLbMqWhKUjiO/2OOtQWmdCPmmQjzKuE6BAw/m/k6mCo3vZQ3WtvEmQhLgIvE1+HJmTfpSA==",
   "success": true,
   "projectFilePath": "D:\\Study\\Coding\\BowlingScoreCalculator\\ScoreCalculator\\ScoreCalculator.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\manum\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.16\\microsoft.aspnetcore.jsonpatch.3.1.16.nupkg.sha512",
+    "C:\\Users\\manum\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.16\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.16.nupkg.sha512",
+    "C:\\Users\\manum\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\manum\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\manum\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
