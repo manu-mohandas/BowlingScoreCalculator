@@ -19,7 +19,8 @@ namespace ScoreCalculator.Model
         public BowlingScoreRequestValidator()
         {
             RuleFor(x => x.PinsDowned).NotNull();
-            RuleFor(x => x.PinsDowned).ForEach(x => x.InclusiveBetween(0, 10));                      
+            RuleFor(x => x.PinsDowned).ForEach(x => x.InclusiveBetween(0, 10)).WithMessage("The total pins downed in each throw cannot be more than 10");
+            RuleFor(x => x.PinsDowned.Sum()).InclusiveBetween(0, 120).WithMessage("The total pins downed in all throws cannot be more than 120");
         }
     }
 }
