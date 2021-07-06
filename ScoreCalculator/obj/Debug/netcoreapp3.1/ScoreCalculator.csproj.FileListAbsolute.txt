@@ -23,3 +23,7 @@ D:\Study\Coding\BowlingScoreCalculator\ScoreCalculator\bin\Debug\netcoreapp3.1\M
 D:\Study\Coding\BowlingScoreCalculator\ScoreCalculator\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 D:\Study\Coding\BowlingScoreCalculator\ScoreCalculator\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 D:\Study\Coding\BowlingScoreCalculator\ScoreCalculator\obj\Debug\netcoreapp3.1\ScoreCalculator.csproj.CopyComplete
+D:\Study\Coding\BowlingScoreCalculator\ScoreCalculator\bin\Debug\netcoreapp3.1\FluentValidation.dll
+D:\Study\Coding\BowlingScoreCalculator\ScoreCalculator\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
+D:\Study\Coding\BowlingScoreCalculator\ScoreCalculator\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
+D:\Study\Coding\BowlingScoreCalculator\ScoreCalculator\obj\Debug\netcoreapp3.1\ScoreCalculator.MvcApplicationPartsAssemblyInfo.cs

@@ -13,6 +13,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FluentValidation.AspNetCore;
+using FluentValidation;
+using ScoreCalculator.Model;
 
 namespace ScoreCalculator
 {
@@ -34,8 +37,9 @@ namespace ScoreCalculator
                 options.Filters.Add(new ApiExceptionFilterAtrribute());
                 options.Filters.Add(new BasicAuthenticationFilter());
 
-            }).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            }).SetCompatibilityVersion(CompatibilityVersion.Version_3_0).AddFluentValidation();
 
+            services.AddTransient<IValidator<BowlingScoreRequest>, BowlingScoreRequestValidator>();
             services.AddScoped(typeof(IBowlingScoreServices), typeof(BowlingScoreServices));
             services.AddScoped(typeof(IBowlingGame), typeof(BowlingGame));
         }

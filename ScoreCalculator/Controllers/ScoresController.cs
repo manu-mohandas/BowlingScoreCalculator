@@ -22,6 +22,11 @@ namespace ScoreCalculator.Controllers
         [HttpPost]
         public ActionResult<BowlingScoreModel> Get([FromBody] BowlingScoreRequest request)
         {
+            if(!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
             return Ok(_bowlingScoreServices.GetFrameProgressScores(request.PinsDowned));
         }
     }
