@@ -20,9 +20,9 @@ namespace ScoreCalculator.Controllers
         }
 
         [HttpPost]
-        public ActionResult<BowlingScoreModel> Get([FromBody] IList<int> pins)
+        public ActionResult<BowlingScoreModel> Get([FromBody] BowlingScoreRequest request)
         {
-            return Ok(_bowlingScoreServices.CalculateScore(pins));
+            return Ok(_bowlingScoreServices.GetFrameProgressScores(request.PinsDowned));
         }
     }
 }
