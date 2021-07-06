@@ -105,3 +105,9 @@ D:\Study\Coding\BowlingScoreCalculator\UnitTests\bin\Debug\netcoreapp3.1\appsett
 D:\Study\Coding\BowlingScoreCalculator\UnitTests\bin\Debug\netcoreapp3.1\ScoreCalculator.exe
 D:\Study\Coding\BowlingScoreCalculator\UnitTests\bin\Debug\netcoreapp3.1\ScoreCalculator.dll
 D:\Study\Coding\BowlingScoreCalculator\UnitTests\bin\Debug\netcoreapp3.1\ScoreCalculator.pdb
+D:\Study\Coding\BowlingScoreCalculator\UnitTests\bin\Debug\netcoreapp3.1\FluentValidation.dll
+D:\Study\Coding\BowlingScoreCalculator\UnitTests\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
+D:\Study\Coding\BowlingScoreCalculator\UnitTests\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
+D:\Study\Coding\BowlingScoreCalculator\UnitTests\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+D:\Study\Coding\BowlingScoreCalculator\UnitTests\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Study\Coding\BowlingScoreCalculator\UnitTests\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll

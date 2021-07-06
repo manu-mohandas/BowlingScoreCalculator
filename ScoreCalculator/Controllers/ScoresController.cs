@@ -20,7 +20,7 @@ namespace ScoreCalculator.Controllers
         }
 
         [HttpPost]
-        public ActionResult<BowlingScoreModel> Get([FromBody] BowlingScoreRequest request)
+        public ActionResult<BowlingScoreResult> Get([FromBody] BowlingScoreRequest request)
         {
             if(!ModelState.IsValid)
             {

@@ -39,7 +39,7 @@ namespace ScoreCalculator
 
             }).SetCompatibilityVersion(CompatibilityVersion.Version_3_0).AddFluentValidation();
 
-            services.AddTransient<IValidator<BowlingScoreRequest>, BowlingScoreRequestValidator>();
+            services.AddScoped<IValidator<BowlingScoreRequest>, BowlingScoreRequestValidator>();
             services.AddScoped(typeof(IBowlingScoreServices), typeof(BowlingScoreServices));
             services.AddScoped(typeof(IBowlingGame), typeof(BowlingGame));
         }

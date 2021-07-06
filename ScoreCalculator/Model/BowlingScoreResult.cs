@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ScoreCalculator.Model
 {
-    public class BowlingScoreModel
+    public class BowlingScoreResult
     {
         public IList<string> FrameProgressScores { get; set; }
         public bool GameCompleted { get; set; }

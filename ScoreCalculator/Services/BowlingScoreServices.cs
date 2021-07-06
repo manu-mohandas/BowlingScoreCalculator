@@ -15,9 +15,9 @@ namespace ScoreCalculator.Services
             _bowlingGame = bowlingGame;
         }
 
-        public BowlingScoreModel GetFrameProgressScores(IList<int> pins)
+        public BowlingScoreResult GetFrameProgressScores(IList<int> pins)
         {
-            var viewModel = new BowlingScoreModel { FrameProgressScores = _bowlingGame.Scores(pins), GameCompleted = _bowlingGame.GameCompleted };
+            var viewModel = new BowlingScoreResult { FrameProgressScores = _bowlingGame.Scores(pins), GameCompleted = _bowlingGame.GameCompleted };
 
             return viewModel;
         }
@@ -25,6 +25,6 @@ namespace ScoreCalculator.Services
 
     public interface IBowlingScoreServices
     {
-        BowlingScoreModel GetFrameProgressScores(IList<int> pins);
+        BowlingScoreResult GetFrameProgressScores(IList<int> pins);
     }
 }

@@ -20,7 +20,7 @@ namespace ScoreCalculator.Model
         {
             RuleFor(x => x.PinsDowned).NotNull();
             RuleFor(x => x.PinsDowned).ForEach(x => x.InclusiveBetween(0, 10));
-            RuleFor(x=>x.PinsDowned.Count).InclusiveBetween(1,12);
+            RuleFor(x=>x.PinsDowned.Count).InclusiveBetween(1,12);            
         }
     }
 }
