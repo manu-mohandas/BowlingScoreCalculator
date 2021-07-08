@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ScoreCalculator.Infrastructure.ErrorHandlers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -19,42 +20,66 @@ namespace ScoreCalculator.Utility
         {
             progressiveScores = new List<string>();
             
-            // loop through the list of pins downed
-            for (int i = 0; i + 1 < pins.Count; i+=2)
+
+            //Score can be calculated only if at least one frame is available.
+            if(pins.Count < 2)
             {
+                progressiveScores.Add("*");
+                GameCompleted = false;
+
+                return progressiveScores;
+            }
+
+            // loop through the list of pins downed
+            for (int throws = 0; throws + 1 < pins.Count; throws+=2)
+            {
+                
                 if (frameIndex == 10)
                     break;
 
+                if (pins[throws] !=10 && pins[throws] + pins[throws + 1] > 10)
+                    throw new ApiException("Invalid input, pins downed in a frame cannot be more that 10", System.Net.HttpStatusCode.BadRequest);
+
                 // Neither strike nor spare
-                if (pins[i] + pins[i + 1] < 10)
+                if (pins[throws] + pins[throws + 1] < 10)
                 {                    
-                    score += pins[i] + pins[i + 1];                    
+                    score += pins[throws] + pins[throws + 1];                    
                     progressiveScores.Add(score.ToString());
-                    frameIndex++;
+                    frameIndex++;                    
                     continue;
                 }                
 
                 // score cannot be determined and the game is not over
-                if (i + 2 >= pins.Count)
+                if (throws + 2 >= pins.Count)
                 {
                     GameCompleted = false;
-                    while (i < pins.Count)
+                    while (throws < pins.Count && frameIndex < 10)
                     {
                         progressiveScores.Add("*");
-                        i++;
+                        throws++;
+                        frameIndex++;
                     }
 
                     break;
                 }
 
                 //Either strike or spare
-                score += pins[i] + pins[i + 1] + pins[i + 2];
+                score += pins[throws] + pins[throws + 1] + pins[throws + 2];
                 progressiveScores.Add(score.ToString());
                 frameIndex++;
+                              
 
                 // In case of strike, advance only by one               
-                 if (pins[i] == 10)
-                    i--;
+                if (pins[throws] == 10)
+                    throws--;
+
+                //verifying, if we have 2 set of throws available to compute the score.
+                int nextThrows = throws + 2;
+                if(nextThrows + 1 == pins.Count && frameIndex < 10)
+                {                    
+                    progressiveScores.Add("*");
+                }              
+               
             }
 
             if (frameIndex < 10)

@@ -10,12 +10,12 @@ namespace ScoreCalculator.Infrastructure.ErrorHandlers
     {
         public HttpStatusCode StatusCode { get; set; }
 
-        public ApiException(string message, HttpStatusCode statuscode = HttpStatusCode.InternalServerError) : base(message)
+        public ApiException(string message, HttpStatusCode statuscode) : base(message)
         {
             StatusCode = statuscode;
         }
 
-        public ApiException(Exception ex, HttpStatusCode statuscode = HttpStatusCode.InternalServerError) : base(ex.Message)
+        public ApiException(Exception ex, HttpStatusCode statuscode) : base(ex.Message)
         {
             StatusCode = statuscode;
         }

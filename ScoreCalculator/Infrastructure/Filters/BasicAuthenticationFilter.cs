@@ -33,7 +33,7 @@ namespace ScoreCalculator.Infrastructure.Filters
                 }
             }
 
-            throw new ApiException("Unauthorized", HttpStatusCode.Forbidden);
+            throw new ApiException("Unauthorized", HttpStatusCode.Unauthorized);
         }
 
         private bool IsValid(string userName, string password)
