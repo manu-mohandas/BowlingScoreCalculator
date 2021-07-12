@@ -3,18 +3,15 @@
 #Route: /api/scores
 
 #Request: 
-
-#Header
-
-Authorization : Basic c2NvcmVjYWxjdWxhdG9yOnNjb3JlY2FsY3VsYXRvcg==
+ Authorization : Basic c2NvcmVjYWxjdWxhdG9yOnNjb3JlY2FsY3VsYXRvcg==
  
- #Body
+ Body
  
   {
     "pinsDowned" : ["10","10","10","10","10","10","10","10","10","10","10","10"]
   }
-  
-  #Response
+
+#Response
   {  
    "frameProgressScores": ["30", "60", "90", "120", "150", "180", "210", "240", "270", "300"],
    "gameCompleted": true
